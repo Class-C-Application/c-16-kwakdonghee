@@ -12,7 +12,7 @@ int main(void)
         printf("메모리 할당이 문제가 있습니다.\n");
         exit(EXIT_FAILURE);
     }
- 
+
     printf("%p\n", cary);
     cary[0] = 10;
 
@@ -28,4 +28,11 @@ int main(void)
     free(reary);
 
     return 0;
+}
+
+void myprintf(int* ary, int n)
+{
+    for (int i = 0; i < n; i++)
+        printf("ary[%d] = %d ", i, *(ary + i));
+    printf("\n");
 }
